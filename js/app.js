@@ -5,8 +5,6 @@ var sessionId =
 var token =
   "T1==cGFydG5lcl9pZD00NzA4NDY5NCZzaWc9OTEzMzljZGYxNGVhYjc3ZmM1ZjI4NWMyNGY1Mzg2ZTA4NWE4YmU5YzpzZXNzaW9uX2lkPTFfTVg0ME56QTRORFk1Tkg1LU1UWXhNRGd6TkRFeE5EZzNOSDVFWkRodlNITjFieXN2WjJsMU9XOUxjRXhyTWxsSWFDdC1mZyZjcmVhdGVfdGltZT0xNjEwODM0MTM4Jm5vbmNlPTAuNjAwMTUwMTk0MDAxOTcyNyZyb2xlPXB1Ymxpc2hlciZleHBpcmVfdGltZT0xNjEwOTIwNTM3JmluaXRpYWxfbGF5b3V0X2NsYXNzX2xpc3Q9";
 
-let mute = false;
-let video = false;
 // (optional) add server code here
 initializeSession();
 
@@ -41,6 +39,7 @@ function initializeSession() {
       insertMode: "append",
       width: "100%",
       height: "100%",
+      style: { buttonDisplayMode: "on" },
     },
     handleError
   );
@@ -54,22 +53,4 @@ function initializeSession() {
       session.publish(publisher, handleError);
     }
   });
-}
-
-function toggleMute() {
-  if (mute) {
-    publisher.publishAudio = false;
-  } else {
-    publisher.publishAudio = true;
-  }
-  mute = !mute;
-}
-
-function toggleVideo() {
-  if (video) {
-    publisher.publishVideo = false;
-  } else {
-    publisher.publishVideo = true;
-  }
-  video = !video;
 }
