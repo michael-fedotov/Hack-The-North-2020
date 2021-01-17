@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <title>VideoGym</title>
+    <link href="../css/app.css" rel="stylesheet" type="text/css" />
+    <link
+      href="https://www.w3schools.com/w3css/4/w3.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://static.opentok.com/v2/js/opentok.min.js"></script>
+  </head>
+  <body>
+    <div id="videos">
+      <canvas id="canvas"></canvas>
+      <div id="subscriber"></div>
+      <div id="publisher"></div>
+    </div>
+    <div id="buttons">
+      <button
+        class="w3-button w3-black w3-round-xlarge"
+        id="motivation"
+        onclick="confetti()"
+      >
+        Motivation Button
+      </button>
+      <button
+        class="w3-button w3-black w3-round-xlarge"
+        id="video"
+        onclick="toggleVideo()"
+      >
+        Toggle Video
+      </button>
+      <button
+        class="w3-button w3-black w3-round-xlarge"
+        id="mute"
+        onclick="toggleMute()"
+      >
+        Toggle Mute
+      </button>
+    </div>
+    <script type="text/javascript" src="../js/app.js"></script>
+    <script type="text/javascript" src="../js/confetti.js"></script>
+  </body>
+</html>
